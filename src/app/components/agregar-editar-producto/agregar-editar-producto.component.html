@@ -1,0 +1,29 @@
+<h3>Agregar Producto</h3>
+<form [formGroup]="agregarProducto" (ngSubmit)="agregar()">
+    <div class="mb-3">
+        <label for="nombreProducto" class="form-label" style="font-family: Times New Roman; font-size: 25px;">Nombre de Producto</label>
+        <input formControlName="nombreProducto" type="text" class="form-control" id="nombreProducto" autocomplete="off">
+        <span class="text-danger" *ngIf="agregarProducto.get('nombreProducto')?.invalid && agregarProducto.get('nombreProducto')?.touched">
+            El <strong>Nombre de Producto</strong> es Requerido
+        </span>
+    </div>
+    <div class="mb-3">
+        <label for="marca" class="form-label" style="font-family: Times New Roman; font-size: 25px;">Marca</label>
+        <input formControlName="marca" type="text" class="form-control" id="marca" autocomplete="off">
+        <span class="text-danger" *ngIf="agregarProducto.get('marca')?.invalid && agregarProducto.get('nombreProducto')?.touched" autocomplete="off">
+            La <strong>Marca</strong> es Requerida
+        </span>
+    </div>
+    <div class="mb-3">
+        <label for="categoria" class="form-label" style="font-family: Times New Roman; font-size: 25px;">Categoria</label>
+        <select formControlName="categoria" class="form-control" id="categoria" rows="8" autocomplete="off"></select>
+        <span class="text-danger" *ngIf="agregarProducto.get('categoria')?.invalid && agregarProducto.get('nombreProducto')?.touched" autocomplete="off">
+            El <strong>Categoria</strong> es Requerido
+        </span>
+    </div>
+    <button type="submit" [disabled]="agregarProducto.invalid" class="btn btn-primary float-end">Enviar</button>
+    <button type="button" class="btn btn-secondary" routerLink= '/'>Volver</button>
+
+    
+
+</form>
