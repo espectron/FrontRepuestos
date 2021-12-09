@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'nor;
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Producto } from 'src/app/interfaces/Producto';
 
 @Component({
