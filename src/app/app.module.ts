@@ -8,6 +8,7 @@ import { AgregarEditarProductoComponent } from './components/agregar-editar-prod
 import { ListProductosComponent } from './components/list-productos/list-productos.component';
 import { VerProductoComponent } from './components/ver-producto/ver-producto.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     AgregarEditarProductoComponent,
     ListProductosComponent,
-    VerProductoComponent
+    VerProductoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
